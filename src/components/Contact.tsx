@@ -57,8 +57,8 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 px-6 bg-secondary/20">
-      <div className="container mx-auto">
+  <section id="contact" className="py-20 px-2 sm:px-6 bg-secondary/20">
+  <div className="container mx-auto max-w-full">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
             <span className="bg-accent-gradient bg-clip-text text-transparent">
@@ -70,9 +70,9 @@ export function Contact() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full">
           {/* Contact Information */}
-          <div className="space-y-6">
+          <div className="space-y-6 w-full">
             <div className="mb-8">
               <h3 className="text-2xl font-semibold mb-4">
                 <span className="text-primary">Informações de Contato</span>
@@ -86,7 +86,7 @@ export function Contact() {
               {contactInfo.map((info) => {
                 const Icon = info.icon;
                 return (
-                  <Card key={info.label} className="bg-card-gradient border-glass hover:shadow-glow-primary/50 transition-all duration-300">
+                  <Card key={info.label} className="bg-card-gradient border-glass hover:shadow-glow-primary/50 transition-all duration-300 w-full">
                     <CardContent className="p-6">
                       <div className="flex items-start gap-4">
                         <div className="p-3 rounded-full bg-primary/20 text-primary">
@@ -104,7 +104,8 @@ export function Contact() {
                               href={info.href}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="text-primary hover:text-accent underline font-medium"
+                              className="text-primary hover:text-accent underline font-medium break-words overflow-wrap break-word"
+                              style={{ wordBreak: 'break-all', overflowWrap: 'break-word' }}
                             >
                               {info.value}
                             </a>
@@ -119,8 +120,8 @@ export function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div>
-            <Card className="bg-card-gradient border-glass">
+          <div className="w-full">
+            <Card className="bg-card-gradient border-glass w-full">
               <CardContent className="p-8">
                 <div className="mb-6">
                   <h3 className="text-2xl font-semibold mb-2">

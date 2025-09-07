@@ -5,7 +5,7 @@ import cvFile from '@/assets/CV-Jose-Ruan-Rodrigues-Sampaio-Dev.pdf'; // Adicion
 
 export function Hero() {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-6 bg-hero-gradient">
+  <section id="home" className="min-h-screen flex items-center justify-center px-6 bg-hero-gradient mt-10 sm:mt-0">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Profile Image */}
