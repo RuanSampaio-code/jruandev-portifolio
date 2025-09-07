@@ -165,8 +165,8 @@ const skillsData = {
 
 export function Skills() {
   return (
-    <section id="skills" className="py-20 px-6">
-      <div className="container mx-auto">
+  <section id="skills" className="py-20 px-2 sm:px-6">
+  <div className="container mx-auto max-w-full">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
             <span className="bg-accent-gradient bg-clip-text text-transparent">
@@ -178,11 +178,11 @@ export function Skills() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
           {Object.entries(skillsData).map(([category, { icon: CategoryIcon, color, skills }]) => (
             <Card 
               key={category}
-              className="bg-card-gradient border-glass hover:shadow-glow-primary/50 transition-all duration-300 group"
+              className="bg-card-gradient border-glass hover:shadow-glow-primary/50 transition-all duration-300 group w-full"
             >
               <CardContent className="p-8">
                 <div className="flex items-center gap-4 mb-6">

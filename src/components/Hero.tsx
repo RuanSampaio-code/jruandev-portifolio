@@ -11,7 +11,7 @@ export function Hero() {
           {/* Profile Image */}
           <div className="flex justify-center lg:justify-start">
             <div className="relative">
-              <div className="w-80 h-80 rounded-full overflow-hidden shadow-glow-primary border-4 border-primary/20">
+              <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-glow-primary border-4 border-primary/20">
                 <img 
                   src={profilePhoto}
                   alt="Ruan Sampaio - Desenvolvedor Backend Java"
@@ -81,15 +81,15 @@ export function Hero() {
               </div>
 
               <Button
-              size="lg"
-              className="bg-accent-gradient hover:shadow-glow-accent transition-all duration-300"
-              asChild
-            >
-              <a href={cvFile} download="CV-Jose-Ruan-Rodrigues-Sampaio-Dev.pdf">
-                <Download className="mr-2 h-5 w-5" />
-                Download CV
-              </a>
-            </Button>
+                size="lg"
+                className="bg-accent-gradient hover:shadow-glow-accent transition-all duration-300 mb-8 sm:mb-0"
+                asChild
+              >
+                <a href={cvFile} download="CV-Jose-Ruan-Rodrigues-Sampaio-Dev.pdf">
+                  <Download className="mr-2 h-5 w-5" />
+                  Download CV
+                </a>
+              </Button>
             </div>
           </div>
         </div>
