@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useState } from 'react';
+import { toast } from '@/hooks/use-toast';
 
 const contactInfo = [
   {
@@ -42,11 +43,35 @@ export function Contact() {
     email: '',
     message: ''
   });
+  const [successMsg, setSuccessMsg] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+
+    try {
+      const response = await fetch('http://localhost:3001/api/proxy', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+      toast({
+        title: 'Mensagem enviada!',
+        description: 'Sua mensagem foi enviada com sucesso.',
+      });
+      setFormData({ name: '', email: '', message: '' });
+      console.log(result);
+    } catch (error) {
+      toast({
+        title: 'Erro ao enviar',
+        description: 'Não foi possível enviar sua mensagem. Tente novamente.',
+        variant: 'destructive',
+      });
+      console.error('Erro ao enviar mensagem:', error);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -133,6 +158,7 @@ export function Contact() {
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Toast feedback removido, agora é global */}
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium mb-2">

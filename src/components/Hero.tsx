@@ -31,17 +31,16 @@ export function Hero() {
                 </span>
               </h1>
               <h2 className="text-2xl lg:text-3xl text-muted-foreground">
-                Desenvolvedor Backend Java
+                Desenvolvedor Fullstack Java
               </h2>
             </div>
 
             <div className="max-w-2xl mx-auto lg:mx-0">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Desenvolvedor Backend Java especializado em aplicações distribuídas de alta performance e escalabilidade. 
-                Atualmente atuando com <span className="text-primary font-medium">Java + Spring Boot</span>, 
-                <span className="text-primary font-medium"> Azure Cloud</span> e 
-                <span className="text-primary font-medium"> Apache Kafka</span>.
-              </p>
+  Desenvolvedor <span className="text-primary font-medium">Fullstack</span> com sólida especialização em <span className="text-primary font-medium">Backend Java</span>.
+  Minha paixão é arquitetar sistemas distribuídos e de alta performance com <span className="text-primary font-medium">Java + Spring Boot</span>, <span className="text-primary font-medium">Apache Kafka</span> e <span className="text-primary font-medium">Azure Cloud</span>.
+  No Frontend, tenho habilidade para criar interfaces reativas, entregando soluções completas e de alto valor.
+</p>
             </div>
 
             {/* Social Links and CV */}
