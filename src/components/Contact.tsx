@@ -49,7 +49,7 @@ export function Contact() {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:3001/api/proxy', {
+      const response = await fetch('https://portifolio-proxy-api-message.onrender.com/api/proxy', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
