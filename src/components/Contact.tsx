@@ -45,7 +45,7 @@ export function Contact() {
   });
   const [successMsg, setSuccessMsg] = useState(false);
 
-  const handleSubmit = async (e) => {
+  /* const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
@@ -72,7 +72,7 @@ export function Contact() {
       });
       console.error('Erro ao enviar mensagem:', error);
     }
-  };
+  }; */
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -157,7 +157,7 @@ export function Contact() {
                   </p>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form action="https://formsubmit.co/8ca633e6a1844422b085013cad370db5" method="POST" className="space-y-6"> {/*  onSubmit={handleSubmit} */}
                   {/* Toast feedback removido, agora é global */}
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
