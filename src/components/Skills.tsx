@@ -149,7 +149,7 @@ const skillsData = {
       { name: 'Firebase' },
     ]
   },
-  'Ferramentas/IDE': {
+  'Ferramentas / IDE': {
     icon: Wrench,
     color: 'text-primary',
     skills: [
