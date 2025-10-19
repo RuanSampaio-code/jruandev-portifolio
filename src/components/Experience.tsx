@@ -3,10 +3,20 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
 const experiences = [
+    {
+    title: "Desenvolvedor de Software Java Jr",
+    company: "CITIESOFT",
+    period: "10/2025 – atual",
+    location: "Híbrido",
+    type: "CLT",
+    description: "Atuação no desenvolvimento e manutenção de aplicações utilizando Java, Spring Boot e Angular. Implementação de APIs REST, integração com serviços AWS e colaboração em projetos de arquitetura e boas práticas. Participação em revisões de código, testes e deploys contínuos, garantindo qualidade e escalabilidade das aplicações.",
+    technologies: ["Java", "Spring Boot", "Angular", "AWS"],
+    highlight: true
+  },
   {
     title: 'Estagiário de Desenvolvimento de Software',
     company: 'PULSE',
-    period: '08/2024 – atual',
+    period: '08/2024 – 09/2024',
     location: 'Remoto',
     type: 'Estágio',
     description: 'Desenvolvimento e manutenção de aplicações Java 8+ com Spring Boot, Hibernate e Maven. Criação de APIs REST, integração com bancos relacionais (PostgreSQL) e noções em bancos não relacionais. Realização de testes unitários e de integração (JUnit, Mockito). Experiência com Git, CI/CD e estudos em mensageria (RabbitMQ), containers (Docker) e monitoramento (Grafana).',
